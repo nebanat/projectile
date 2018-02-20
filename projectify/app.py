@@ -1,4 +1,5 @@
 from flask import Flask
+from projectify.extensions import db
 
 
 def create_app(settings_override=None):
@@ -19,6 +20,18 @@ def create_app(settings_override=None):
     def index():
         return 'Welcome to projectify api'
 
+    extensions(app)
+
     return app
 
 
+def extensions(app):
+    """
+    Register all extensions (mutates the app passed into it)
+
+    :param app:
+    :return: None
+    """
+    db.init_app(app)
+
+    return None
