@@ -2,4 +2,15 @@ venv
 .pytest_cache
 .env
 .coverage
+.idea
 Projectify_CLI.egg-info
+__pycache__
+
+*/__pycache__
+*.pyc
+*.db
+*.coverage
+.DS_Store
+env.sh
+migrations
+htmlcov
