@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8dddc69-61c0-44fa-9db4-4b5dc5478be0" name="Default" comment="chore(setup click CLI): setup click for writing application CLI commands&#10;- Setup blueprint for defining click cli commands&#10;- add click commands for test and cov&#10;[delivers 839930]">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Projectify_CLI.egg-info/PKG-INFO" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Projectify_CLI.egg-info/SOURCES.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Projectify_CLI.egg-info/dependency_links.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Projectify_CLI.egg-info/entry_points.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Projectify_CLI.egg-info/requires.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Projectify_CLI.egg-info/top_level.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cli/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cli/cli.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cli/commands/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cli/commands/cmd_cov.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cli/commands/cmd_test.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/setup.py" />
-      <change beforePath="$PROJECT_DIR$/.coverage" afterPath="$PROJECT_DIR$/.coverage" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="e8dddc69-61c0-44fa-9db4-4b5dc5478be0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -240,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519138424465</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="chore(setup click CLI): setup click for writing application CLI commands&#10;- Setup blueprint for defining click cli commands&#10;- add click commands for test and cov&#10;[delivers 839930]">
+      <created>1519239082347</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1519239082347</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -251,10 +242,10 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28899637" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28899637" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -271,7 +262,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore(setup postgres service): setup postgres service in docker container&#10;- add postgres service to docker&#10;- initialize app with sqlalchemy as app orm &#10;[delivers 155329799]" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(setup postgres service): setup postgres service in docker container&#10;- add postgres service to docker&#10;- initialize app with sqlalchemy as app orm &#10;[delivers 155329799]" />
+    <MESSAGE value="chore(setup click CLI): setup click for writing application CLI commands&#10;- Setup blueprint for defining click cli commands&#10;- add click commands for test and cov&#10;[delivers 839930]" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(setup click CLI): setup click for writing application CLI commands&#10;- Setup blueprint for defining click cli commands&#10;- add click commands for test and cov&#10;[delivers 839930]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
