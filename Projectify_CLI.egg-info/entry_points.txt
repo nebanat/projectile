@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        projectify=cli.cli:cli
+    
