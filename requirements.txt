@@ -10,7 +10,13 @@ flake8==2.5.4
 
 # Data and worker
 psycopg2
+# psycopg2-binary
 Flask-SQLAlchemy
 
 # flask CLI command
 click
+
+#restful
+flask-restful
+
+sqlalchemy_utils

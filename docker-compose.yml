@@ -18,9 +18,11 @@ services:
         --reload
         "projectify.app:create_app()"
     environment:
-      PYTHONUNBUFFERED: 'true'
+     - '.env'
     volumes:
       - '.:/projectify'
+    links:
+      - postgres:postgres
     ports:
       - '8000:8000'
 
