@@ -1,5 +1,6 @@
 from flask import Flask
 from projectify.extensions import db
+from projectify.blueprints.user.views import user
 
 
 def create_app(settings_override=None):
@@ -20,6 +21,7 @@ def create_app(settings_override=None):
     def index():
         return 'Welcome to projectify api'
 
+    app.register_blueprint(user)
     extensions(app)
 
     return app
