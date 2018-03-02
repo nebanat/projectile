@@ -1,9 +1,9 @@
 from flask import Blueprint
 from flask_restful import Api
 
-from projectify.blueprints.user.resources.user_resource import User
+from projectify.blueprints.user.resources.user_register import UserRegister
 
-user = Blueprint('user', __name__, url_prefix='/user')
+user = Blueprint('user', __name__)
 user_api = Api(user)
 
-user_api.add_resource(User, '/api')
+user_api.add_resource(UserRegister, '/api/v1/register')
