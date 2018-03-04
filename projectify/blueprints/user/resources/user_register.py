@@ -18,7 +18,7 @@ class UserRegister(Resource):
         """
         checked_user = User.get_by_username_and_email(user_details['username'], user_details['email'])
         if checked_user is not None:
-            if checked_user.username == user_details['username']:
+            if checked_user.username == user_details['username'].lower():
                 return {'message': 'Username already exist'}, 409
             elif checked_user.email == user_details['email']:
                 return {'message': 'Email already exist'}, 409
@@ -26,4 +26,4 @@ class UserRegister(Resource):
             new_user = User(**user_details)
             new_user.password = User.encrypt_password(user_details['password'])
             new_user.save_to_db()
-            return {'message': 'User created successfully'}, 200
+            return {'message': 'User created successfully'}, 201
