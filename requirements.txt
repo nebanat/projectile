@@ -9,7 +9,7 @@ pytest-cov
 flake8==2.5.4
 
 # Data and worker
-psycopg2
+psycopg2==2.7.3.2
 # psycopg2-binary
 Flask-SQLAlchemy
 alembic
