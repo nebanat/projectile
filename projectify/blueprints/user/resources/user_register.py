@@ -26,4 +26,4 @@ class UserRegister(Resource):
             new_user = User(**user_details)
             new_user.password = User.encrypt_password(user_details['password'])
             new_user.save_to_db()
-            return {'message': 'User created successfully'}, 200
+            return {'message': 'User created successfully'}, 201
