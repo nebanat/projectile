@@ -1,6 +1,6 @@
 from projectify.extensions import db
 from lib.util_sqlalchemy import ModelMixin
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 class User(ModelMixin, db.Model):
@@ -27,5 +27,17 @@ class User(ModelMixin, db.Model):
     def get_by_username_and_email(cls, username, email):
         return cls.query.filter((cls.username == username) | (cls.email == email)).first()
 
+    def check_password(self, password):
+        return check_password_hash(self.password, password)
 
+    @classmethod
+    def get_by_username(cls, username):
+        return cls.query.filter_by(username=username).first()
 
+    @classmethod
+    def get_by_email(cls, email):
+        return cls.query.filter_by(email=email).first()
+
+    @classmethod
+    def get_by_id(cls, _id):
+        return cls.query.filter_by(id=_id).first()

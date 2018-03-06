@@ -9,3 +9,4 @@ user_register_args = {
     'password': fields.Str(required=True,
                            validate=validate.Length(min=6))
 }
+
