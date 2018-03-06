@@ -1,4 +1,3 @@
-# from flask import request
 from flask_restful import Resource
 from projectify.blueprints.user.schemas import user_register_args
 from webargs.flaskparser import use_args

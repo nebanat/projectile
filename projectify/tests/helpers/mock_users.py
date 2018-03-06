@@ -15,3 +15,18 @@ test_user_email_duplicate = {
     'email': 'khaleesi@targaryen.com',
     'password': 'password'
 }
+
+test_user_login = {
+        'email': 'khaleesi@targaryen.com',
+        'password': 'password'
+}
+
+test_user_wrong_email = {
+        'email': 'johnsnow@targaryen.com',
+        'password': 'password'
+}
+
+test_user_wrong_password = {
+        'email': 'khaleesi@targaryen.com',
+        'password': 'password234'
+}

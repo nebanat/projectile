@@ -24,3 +24,5 @@ flask-restful
 
 sqlalchemy_utils
 
+#authentication
+Flask-JWT

@@ -16,7 +16,9 @@ def app():
     params = {
         'DEBUG': False,
         'TESTING': True,
-        'SQLALCHEMY_DATABASE_URL': db_uri
+        'SQLALCHEMY_DATABASE_URL': db_uri,
+        'JWT_AUTH_URL_RULE': '/login',
+        'JWT_AUTH_USERNAME_KEY': 'email'
     }
 
     _app = create_app(settings_override=params)
@@ -61,6 +63,7 @@ def db(app):
     }
 
     test_user = User(**params)
+    test_user.password = User.encrypt_password(params['password'])
 
     _db.session.add(test_user)
     _db.session.commit()
