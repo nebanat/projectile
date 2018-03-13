@@ -30,3 +30,12 @@ test_user_wrong_password = {
         'email': 'khaleesi@targaryen.com',
         'password': 'password234'
 }
+
+test_project_details = {
+    "title": "software testing",
+    "description": "testing description",
+    "project_url": "http://www.swebok.com",
+    "price": 2500
+}
+
+fake_token = 'somejwttoken'

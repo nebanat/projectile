@@ -1,6 +1,6 @@
 from flask import json
 from lib.tests import ViewTestMixin
-from projectify.tests.helpers.mock_users \
+from projectify.tests.helpers.mock_data \
     import test_correct_user, test_user_username_duplicate, test_user_email_duplicate,\
     test_user_login, test_user_wrong_email, test_user_wrong_password
 

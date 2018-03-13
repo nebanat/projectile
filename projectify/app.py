@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from projectify.extensions import db
 from projectify.blueprints.user.views import user
+from projectify.blueprints.project.views import project
 from flask_jwt import JWT
 from security import authenticate, identity as identity_function
 
@@ -25,6 +26,7 @@ def create_app(settings_override=None):
 
     # registers blueprint
     app.register_blueprint(user)
+    app.register_blueprint(project)
 
     # plugs app to all configuration
     configure_jwt(app)

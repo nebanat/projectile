@@ -3,7 +3,7 @@ import pytest
 from config import settings
 from projectify.app import create_app
 from projectify.extensions import db as _db
-from projectify.blueprints.user.models import User
+from projectify.models.user import User
 
 
 @pytest.yield_fixture(scope='session')

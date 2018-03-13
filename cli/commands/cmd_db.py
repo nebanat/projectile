@@ -4,7 +4,6 @@ from sqlalchemy_utils import database_exists, create_database
 
 from projectify.app import create_app
 from projectify.extensions import db
-from projectify.blueprints.user.models import User
 
 # Create an app context for the database connection.
 app = create_app()
