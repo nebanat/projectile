@@ -14,6 +14,7 @@ psycopg2==2.7.3.2
 Flask-SQLAlchemy
 alembic
 webargs
+marshmallow
 
 
 # flask CLI command
@@ -25,4 +26,4 @@ flask-restful
 sqlalchemy_utils
 
 #authentication
-Flask-JWT
+flask-jwt
