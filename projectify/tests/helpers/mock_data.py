@@ -38,4 +38,10 @@ test_project_details = {
     "price": 2500
 }
 
+test_category_details = {
+    "name": "some category",
+    "description": "some description"
+}
+
 fake_token = 'somejwttoken'
+
