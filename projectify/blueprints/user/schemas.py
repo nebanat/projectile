@@ -1,4 +1,4 @@
-from marshmallow import Schema, fields, validate
+from marshmallow import Schema, fields, validate, pre_load
 
 
 class UserSchema(Schema):
@@ -17,6 +17,12 @@ class UserSchema(Schema):
     created_on = fields.DateTime(required=True, dump_only=True)
 
     updated_on = fields.DateTime(required=True, dump_only=True)
+
+    @pre_load()
+    def username_email_to_lower(self, data):
+        data['username'] = data['username'].lower().strip()
+        data['email'] = data['email'].lower().strip()
+        return data
 
     class Meta:
         strict = True

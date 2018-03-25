@@ -3,7 +3,7 @@ import pytest
 from config import settings
 from projectify.app import create_app
 from projectify.extensions import db as _db
-from projectify.models.user import User
+from projectify.models import User, Category
 
 
 @pytest.yield_fixture(scope='session')
@@ -56,16 +56,25 @@ def db(app):
 
     # Create a single user because a lot of tests do not mutate this user.
     # It will result in faster tests.
-    params = {
+    user_params = {
         'username': 'khaleesi',
         'email': 'khaleesi@targaryen.com',
         'password': 'password'
     }
 
-    test_user = User(**params)
-    test_user.password = User.encrypt_password(params['password'])
+    category_params = {
+        'name': 'lawyers',
+        'description': 'some description',
+        'slug': 'lawyers'
+    }
+
+    test_user = User(**user_params)
+    test_user.password = User.encrypt_password(user_params['password'])
+
+    test_category = Category(**category_params)
 
     _db.session.add(test_user)
+    _db.session.add(test_category)
     _db.session.commit()
 
     return _db
