@@ -19,11 +19,13 @@ class UserSchema(Schema):
     updated_on = fields.DateTime(required=True, dump_only=True)
 
     @pre_load()
-    def username_email_to_lower(self, data):
+    def user_details_to_lower_strip(self, data):
         data['username'] = data['username'].lower().strip()
         data['email'] = data['email'].lower().strip()
+        data['password'] = data['password'].strip()
         return data
 
     class Meta:
         strict = True
         many = True
+

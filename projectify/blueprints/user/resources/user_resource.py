@@ -4,7 +4,7 @@ from webargs.flaskparser import use_args
 from projectify.models import User
 
 
-class UserRegister(Resource):
+class UserResource(Resource):
 
     @use_args(UserSchema(), locations=('json', 'form'))
     def post(self, user_args):
@@ -23,7 +23,10 @@ class UserRegister(Resource):
             elif checked_user.email == user_args['email']:
                 return dict(message='Email already exist'), 409
         else:
-            new_user = User(**user_args)
-            new_user.password = User.encrypt_password(user_args['password'])
-            new_user.save_to_db()
-            return dict(message='User created successfully'), 201
+            user = User(**user_args)
+            user.password = User.encrypt_password(user_args['password'])
+            user.save_to_db()
+            new_user = UserSchema(exclude=('password',)).dump(User.filter_by(id=user.id))
+
+            return dict(message='User created successfully',
+                        data=dict(user=new_user.data)), 201
