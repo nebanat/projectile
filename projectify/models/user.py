@@ -18,6 +18,12 @@ class User(db.Model, ModelMixin):
 
     @classmethod
     def encrypt_password(cls, plaintext_password):
+        """
+        generates a password hash for the user plaintext password
+
+        :param plaintext_password: user plaintext password
+        :return: hashed password
+        """
         if plaintext_password:
             return generate_password_hash(plaintext_password)
 
@@ -25,6 +31,13 @@ class User(db.Model, ModelMixin):
 
     @classmethod
     def get_by_username_and_email(cls, username, email):
+        """
+        filters user by username or email
+
+        :param username: user username
+        :param email:  user email
+        :return: user instance marching email or username
+        """
         return cls.query.filter((cls.username == username) | (cls.email == email)).first()
 
     def check_password(self, password):

@@ -1,4 +1,4 @@
-from marshmallow import Schema, fields, validate
+from marshmallow import Schema, fields, validate, pre_load
 from core.validation import CustomValidation
 from projectify.blueprints.user.schemas import UserSchema
 
@@ -34,3 +34,10 @@ class ProjectSchema(Schema):
         strict = True
         many = True
 
+    @pre_load()
+    def project_details_to_strip(self, data):
+        data['title'] = data['title'].strip()
+        data['description'] = data['description'].strip()
+        data['project_url'] = data['project_url'].strip()
+
+        return data
